@@ -1,0 +1,43 @@
+/*    Settings
+=====================================================*/
+:root {
+  /* Contents */
+  --cont-width: 743px;
+
+  /* Color */
+  --color-main: #01A784;
+  --color-sub: #E7F5F3;
+  --color-border: #918989;
+  --color-bg: #f4f4f4;
+  --color-text: #434343;
+  --color-hover: #bbb;
+  --color-reverse: #fff;
+
+  --color-light-gray: #ebebeb;
+  --color-gray: #d9d9d9;
+
+  --color-blue: #1460A7;
+  --color-orange: #EE892A;
+  --color-green: #2C837B;
+  --color-mint: #A6D8CD;
+
+  /* Text */
+  --font-en: "Montserrat";
+  --font-jp: "Noto Sans JP";
+  --font-detail: "Times New Roman", serif;
+  --fz-main: 1.6rem;
+  --line-height: 1;
+
+  /* Other */
+  --opacity: 0.7;
+  --transition: 0.2s;
+  --scale: 1.03;
+  --easing: ease;
+  --bdrs-infinite: calc(1px / 0);
+  --leading-trim: calc((1em - 1lh) / 2);
+
+  --triangle-t: polygon(50% 0, 0 100%, 100% 100%);
+  --triangle-b: polygon(50% 100%, 0 0, 100% 0);
+  --triangle-l: polygon(0 50%, 100% 100%, 100% 0);
+  --triangle-r: polygon(100% 50%, 0 100%, 0 0);
+}
