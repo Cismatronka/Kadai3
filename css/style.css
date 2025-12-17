@@ -583,12 +583,19 @@ main .l_wrap{
   width: calc(100% - 2.4rem * 2);
   margin: auto;
 }
-
+.main_data .l_wrap_inr{
+  max-width: 745px;
+  width: calc(100% - 2.4rem * 2);
+  margin: auto;
+}
 @media (max-width: 1040px) {
 }
 
 @media (max-width: 896px) {
-  .l_wrap_inr {
+  main .l_wrap{
+    width: calc(100% - 0.8rem * 2);
+  }
+  .main_data .l_wrap_inr{
     width: calc(100% - 0.8rem * 2);
   }
 }

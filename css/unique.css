@@ -2,6 +2,26 @@
 
 @import "settings.css";
 
+.link_line{
+  position: relative;
+}
+.link_line::after{
+  content: "";
+  position: absolute;
+  bottom: -0.3rem;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: var(--color-reverse);
+  transition: transform var(--transition) var(--easing);
+  transform-origin: left;
+  transform: scaleX(0) rotate(0.001deg);
+}
+.link_line:hover::after {
+  transform-origin: left;
+  transform: scaleX(1) rotate(0.001deg);
+}
+
 /*============================================================================================
       Header
 =============================================================================================*/
@@ -212,6 +232,8 @@
 /*============================================================================================
       Menu
 =============================================================================================*/
+/*    MV
+=====================================================*/
 .mv_recruit{
   margin-top: 70px;
   border-radius: 1rem;
@@ -222,12 +244,14 @@
 .mv_recruit::after{
   display: block;
   position: absolute;
-  width: 100%;
+  width: 64%;
   height: 100%;
-  content: url(../img/common/mv_bg_img.png);
-  inset: auto -1px -1px auto;
+  content: "";
+  background-image: url(../img/common/mv_bg_img.png);
+  inset: auto -1% -1% auto;
   background-size: contain;
   background-repeat: no-repeat;
+  background-position: 100% 100%;
 }
 .mv_header{
   width: 21rem;
@@ -243,17 +267,17 @@
   padding-left: 2rem;
   padding-bottom: 2.5rem;
 }
-.mv_header_top > * >:nth-child(2) {
+.mv_recruit_top > * >:nth-child(2) {
   width: 1.6rem;
   background-image: url(../img/common/mv_bg_pattern.png);
   border-radius: 1rem 0 0 0rem;
 }
-.mv_header_top > * >:nth-child(3) {
+.mv_recruit_top > * >:nth-child(3) {
   flex-grow: 1;
   background-image: url(../img/common/mv_bg_pattern.png);
   border-radius: 0 1rem 0 0;
 }
-.mv_header_top > :nth-child(2) {
+.mv_recruit_top > :nth-child(2) {
   width: 100%;
   height: 1rem;
   background-image: url(../img/common/mv_bg_pattern.png);
@@ -271,30 +295,120 @@
   font-family: var(--font-en);
   text-transform: uppercase;
 }
-.mv_header_btm{
+.mv_recruit_btm{
   background-image: url(../img/common/mv_bg_pattern.png); 
   width: auto;
-  height: 50rem;
   border-radius: 0 0 1rem 1rem;
+  padding: 8rem 8rem 4.4rem 8rem;
+}
+.mv_page_name{
+  position: absolute;
+  inset: auto 0 2rem auto;
+  z-index: 1;
+  font-size: 9.3rem;
+  color: #F4FAF9;
+  font-size: clamp(4rem, 7vw, 9.3rem);
+}
+.mv_ttl_wrap{
+  padding-bottom: 15rem;
 }
 
 
 
-.cta_about{
+@media (max-width: 896px) {
+  .mv_header{
+    width: 16rem;
+    height: 7rem;
+  }
+  .mv_header_inr{
+    padding-left: 0rem;
+    padding-bottom: 0rem;
+  }
+  .mv_header_ttl::before{
+    display: block;
+    position: relative;
+    content: "Recruit";
+    font-size: 2.7rem;
+    font-family: var(--font-en);
+    text-transform: uppercase;
+  }
+  .mv_recruit_btm{
+    padding: 3rem 2.4rem 10rem 2.4rem;
+  }
+  .mv_page_name{
+    font-size: 4rem;
+  }
+  .mv_ttl_wrap{
+    padding-bottom: 8rem;
+  }
+}
+
+/*    Main
+=====================================================*/
+.main_data{
+  position: relative;
+  z-index: 2;
+  top: -2rem;
+  border-radius: 1.6rem;
+  padding: 12rem 0;
+  background-color: var(--color-sub);
+}
+.card_group_ttl{
+  font-size: 4.8rem;
+}
+.card_group_detail{
+  line-height: 1.8;
+}
+.card_group_header{
+  padding-bottom: 4rem;
+}
+.main_data_card{
+  padding: 2.4rem 1.2rem;
+  background-color: var(--color-reverse);
+  border-radius: 1rem;
+  
+}
+.main_data .card_info{
+  font-size: 6.4rem;
+}
+.main_data .card_info span{
+  font-size: 2.4rem;
+}
+.main_data .card_img{
+  height: 128px;
+}
+
+
+
+@media (max-width: 896px) {
+  .card_group_ttl{
+    font-size: 3.2rem;
+  }
+  .card_group_detail{
+    line-height: 1.8;
+  }
+}
+
+
+
+
+/*    CTA - About
+=====================================================*/
+.cta_recruit_about{
   padding-top: 12rem;
   padding-bottom: 16rem;
 }
-.cta_about_btn{
+.cta_recruit_about_btn{
   width: 47.1rem;
   height: 18rem;
   background-color: var(--color-main);
   padding: 0 3.2rem;
   border-radius: 1rem;
 }
-.cta_about_ttl{
+.cta_recruit_about_ttl{
   font-size: 5.6rem;
 }
-.cta_about_btn_ico{
+.cta_recruit_about_btn_ico{
   width: 5rem;
   height: 5rem;
   border: 1px solid var(--color-reverse);
@@ -306,49 +420,35 @@
   justify-content: center;
   position: relative;
 }
-.cta_about_btn_ico.u_ic::before{
+.cta_recruit_about_btn_ico.u_ic::before{
   width: 0.6rem;
   height: 1rem;
   background-image: url(../img/data/cta_about_btn_ico.svg);
 }
 
 
-
-.cta_about_btn:hover .cta_about_btn_ico{
-  transform: scale(1.1);
+@media (any-hover: hover) {
+  .cta_recruit_about_btn:hover .cta_recruit_about_btn_ico{
+    transform: scale(1.1);
+  }
 }
+
 
 
 @media (max-width: 896px) {
-.mv_header{
-  width: 16rem;
-  height: 7rem;
-}
-.mv_header_inr{
-  padding-left: 0rem;
-  padding-bottom: 0rem;
-}
-.mv_header_ttl::before{
-  display: block;
-  position: relative;
-  content: "Recruit";
-  font-size: 2.7rem;
-  font-family: var(--font-en);
-  text-transform: uppercase;
-}
-.cta_about{
+.cta_recruit_about{
   padding-top: 12rem;
   padding-bottom: 8rem;
 }
-  .cta_about_btn{
+  .cta_recruit_about_btn{
     max-width: 500px;
     height: 9rem;
   }
-  .cta_about_btn .u_img{
+  .cta_recruit_about_btn .u_img{
     width: 4rem;
     height: 4rem;
   }
-  .cta_about_ttl{
+  .cta_recruit_about_ttl{
     font-size: 3.6rem;
   }
 }
@@ -416,7 +516,7 @@
   .footer_inr{
     display: none;
   }
-  .cta_about_btn{
+  .cta_recruit_about_btn{
     width: 100%;
   }
 }

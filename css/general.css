@@ -181,15 +181,14 @@
 /*    Heading
 =====================================================*/
 .g_pgHd {
-  padding: 6rem 2rem;
-  font-size: 4.8rem;
-  text-align: center;
-  background-color: var(--color-sub);
+  font-size: 5.6rem;
+  color: var(--color-reverse);
+  font-weight: 700;
 }
-
 @media (max-width: 896px) {
   .g_pgHd {
-    font-size: 2.6rem;
+    font-size: 3.6rem;
+    line-height: 1.3;
   }
 }
 
@@ -941,8 +940,10 @@
 /*    Breadcrumb
 =====================================================*/
 .g_breadcrumb_lst {
-  padding: 1rem 0;
-  overflow-x: auto;
+  /* overflow-x: auto; */
+  color: var(--color-reverse);
+  display: flex;
+  font-weight: 700;
 }
 
 .g_breadcrumb_lst__line {
@@ -952,28 +953,26 @@
 .g_breadcrumb_itm {
   position: relative;
   font-size: 1rem;
-  line-height: 1.5;
+  line-height: 1;
   white-space: nowrap;
+}
+
+.g_breadcrumb_itm__crnt{
+  cursor: default;
 }
 
 .g_breadcrumb_itm + .g_breadcrumb_itm::before {
   content: "";
-  position: absolute;
-  margin: auto;
-  width: 0.3rem;
-  height: 0.3rem;
-  top: 0;
-  bottom: 0;
-  left: -1.15rem;
-  border-top: 0.1rem solid var(--color-main);
-  border-right: 0.1rem solid var(--color-main);
-  rotate: 45deg;
+  display: inline-block;
+  position: relative;
+  transform: translateY(-0.4rem);
+  margin: 0 0.5rem;
+  width: 5px;
+  height: 1px;
+  background-color: var(--color-reverse);
 }
 
 @media (any-hover: hover) {
-  .g_breadcrumb_lst_li a:hover {
-    color: var(--color-main);
-  }
 }
 
 @media (max-width: 896px) {
