@@ -355,23 +355,34 @@
 }
 .card_group_ttl{
   font-size: 4.8rem;
-}
-.card_group_detail{
-  line-height: 1.8;
+  line-height: 0.7;
 }
 .card_group_header{
-  padding-bottom: 4rem;
+  padding-bottom: 2.6rem;
+}
+.card_group{
+  padding-top: 2.4rem;
 }
 .main_data_card{
   padding: 2.4rem 1.2rem;
+  padding: 1.2rem 0.9rem;
   background-color: var(--color-reverse);
   border-radius: 1rem;
-  
+}
+.card_ttl{
+  line-height: 1.5;
 }
 .main_data .card_info{
   font-size: 6.4rem;
 }
+.main_data .card_info.card_info__large{
+  font-size: 8.2rem;
+}
+.main_data .card_info.card_info__xlarge{
+  font-size: 9.6rem;
+}
 .main_data .card_info span{
+  font-family: var(--font-jp);
   font-size: 2.4rem;
 }
 .main_data .card_img{
@@ -381,11 +392,29 @@
 
 
 @media (max-width: 896px) {
+  .main_data{
+    padding: 4.6rem 0;;
+  }
   .card_group_ttl{
     font-size: 3.2rem;
   }
-  .card_group_detail{
-    line-height: 1.8;
+  .card_group_header{
+    padding-bottom: 0;
+  }
+  .main_data .card_info{
+    font-size: 4.4rem;
+  }
+  .main_data .card_info.card_info__big{
+  font-size: 5.6rem;
+  }
+  .main_data .card_info span{
+    font-size: 1.6rem;
+  }
+  .main_data .card_img{
+    height: 90px;
+  }
+  .main_data .card_info.card_info__xlarge{
+    font-size: 5.6rem;
   }
 }
 
