@@ -256,7 +256,6 @@
 .mv_header{
   width: 21rem;
   height: 10rem;
-  background-image: url(../img/common/mv_bg_pattern.png);
 }
 .mv_header_inr{
   width: 100%;
@@ -269,18 +268,15 @@
 }
 .mv_recruit_top > * >:nth-child(2) {
   width: 1.6rem;
-  background-image: url(../img/common/mv_bg_pattern.png);
   border-radius: 1rem 0 0 0rem;
 }
 .mv_recruit_top > * >:nth-child(3) {
   flex-grow: 1;
-  background-image: url(../img/common/mv_bg_pattern.png);
   border-radius: 0 1rem 0 0;
 }
 .mv_recruit_top > :nth-child(2) {
   width: 100%;
   height: 1rem;
-  background-image: url(../img/common/mv_bg_pattern.png);
   border-radius: 1rem 0 0 0;
 }
 .mv_header_ttl{
@@ -296,7 +292,6 @@
   text-transform: uppercase;
 }
 .mv_recruit_btm{
-  background-image: url(../img/common/mv_bg_pattern.png); 
   width: auto;
   border-radius: 0 0 1rem 1rem;
   padding: 8rem 8rem 4.4rem 8rem;
@@ -388,6 +383,10 @@
 .main_data .card_img{
   height: 128px;
 }
+.main_data .card_img > *{
+  height: 100%;
+  object-fit: contain;
+}
 
 
 
@@ -405,7 +404,7 @@
     font-size: 4.4rem;
   }
   .main_data .card_info.card_info__big{
-  font-size: 5.6rem;
+    font-size: 5.6rem;
   }
   .main_data .card_info span{
     font-size: 1.6rem;
@@ -414,7 +413,7 @@
     height: 90px;
   }
   .main_data .card_info.card_info__xlarge{
-    font-size: 5.6rem;
+    font-size: 4.5rem;
   }
 }
 
@@ -552,3 +551,10 @@
 /*============================================================================================
       Contents
 =============================================================================================*/
+
+
+.test{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}

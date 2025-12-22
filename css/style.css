@@ -317,6 +317,7 @@ map area {
 
 /* pattern background */
 .u_bg {
+  background-image: url(../img/common/mv_bg_pattern.png);
   background-repeat: repeat;
   background-position: left top;
   background-size: auto;
