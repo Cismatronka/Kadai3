@@ -407,6 +407,10 @@
   
   display: inline-block;
 }
+.product_itm_lst.u_ic::before{
+  content: "▲";
+  display: block;
+}
 
 
 @media (max-width: 896px) {
