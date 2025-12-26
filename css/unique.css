@@ -363,6 +363,10 @@
   background-color: var(--color-reverse);
   border-radius: 1rem;
 }
+.main_data_card.main_data_card__large{
+  padding: 2.4rem 4rem;
+  gap: 2.4rem;
+}
 .card_ttl{
   line-height: 1.5;
 }
@@ -387,6 +391,7 @@
   object-fit: contain;
 }
 .main_data .product_itm{
+  color: var(--color-green);
   flex-wrap: nowrap;
   line-height: 1;
 }
@@ -395,7 +400,6 @@
   width: 100%;
 }
 .product_itm_ttlnum{
-  font-size: 4.8rem;
   align-items: baseline;
 }
 .product_itm li {
@@ -404,13 +408,14 @@
 }
 .product_itm li.u_ic::before{
   content: "・";
-  
+  left: -1.2rem;
   display: inline-block;
 }
-.product_itm_lst.u_ic::before{
-  content: "▲";
-  display: block;
+.product_itm_lst{
+  border-radius: 0.5rem;
+  padding: 0.5rem;
 }
+
 
 
 @media (max-width: 896px) {
@@ -425,9 +430,6 @@
   }
   .main_data .card_info{
     font-size: 4.4rem;
-  }
-  .main_data .card_info.card_info__big{
-    font-size: 5.6rem;
   }
   .main_data .card_info span{
     font-size: 1.6rem;
@@ -445,10 +447,25 @@
     font-size: 2.8rem;
     align-items: baseline;
   }
-  .product_itm ul {
-    padding: 1rem;
+  .product_itm_lst{
+    width: 100%;
     background-color: var(--color-light-mint);
+    padding: 2rem;
   }
+  .product_itm_lst.u_ic::before{
+    content: "▲";
+    display: block;
+    inset: -1rem auto auto 50%;
+    color: var(--color-light-mint);
+  }
+  .product_itm_lst_wrap{
+    width: 100%;
+  }
+  .main_data_card.main_data_card__large{
+    padding: 2.4rem 1.2rem;
+    gap: 1.6rem;
+  }
+  
 }
 
 @media (max-width: 579px) {
@@ -486,8 +503,8 @@
   position: relative;
 }
 .cta_recruit_about_btn_ico.u_ic::before{
-  width: 0.6rem;
-  height: 1rem;
+  width: 6px;
+  height: 10px;
   background-image: url(../img/data/cta_about_btn_ico.svg);
 }
 

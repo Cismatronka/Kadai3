@@ -377,6 +377,9 @@ map area {
 }
 
 /*-- Font Size --*/
+.u_fz48 {
+  font-size: 4.8rem;
+}
 .u_fz40 {
   font-size: 4rem;
 }
